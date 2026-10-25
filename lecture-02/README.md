@@ -1,10 +1,10 @@
 # Lecture 2: ReAct agents with LangGraph
 
-The loop from lecture 1 has a name: **ReAct** (Reason + Act). The model reasons, asks for a tool, observes the result and repeats until it can answer. This lecture rebuilds that loop with **LangGraph**, then opens it up to show what is sent to the LLM on every turn.
+Lecture 1's harness makes a single round trip, so it can't solve a task where one step needs another step's result. The fix is a loop: the model reasons, asks for a tool, observes the result and repeats until it can answer. That loop is called **ReAct** (Reason + Act). This lecture builds it with **LangGraph**, then opens it up to show what is sent to the LLM on every turn.
 
 The LLM is stateless. On every call the harness sends the system prompt, the tool definitions and the **whole conversation so far**. Each step appends new messages and nothing is removed, so the context grows on every turn and the total tokens billed grow even faster.
 
-For a written explanation of the lecture's ideas, read the [lecture notes](lecture_notes.md).
+See [`react-agents-and-context.md`](react-agents-and-context.md) for the full lecture overview: goals, key concepts and outline.
 
 ## Notebook
 
