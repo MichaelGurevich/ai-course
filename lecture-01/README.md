@@ -1,6 +1,8 @@
-# Lecture 1: What is a harness?
+# Lecture 1: Intro to harness
 
 An LLM only turns text into text. It has no abilities of its own. A **harness** is the ordinary code around the model that reads its output, detects tool requests, runs the real functions and feeds the results back.
+
+See [`intro-to-harness.md`](intro-to-harness.md) for the full lecture overview: goals, key concepts and outline.
 
 ## Notebook
 
