@@ -4,6 +4,8 @@ The loop from lecture 1 has a name: **ReAct** (Reason + Act). The model reasons,
 
 The LLM is stateless. On every call the harness sends the system prompt, the tool definitions and the **whole conversation so far**. Each step appends new messages and nothing is removed, so the context grows on every turn and the total tokens billed grow even faster.
 
+For a written explanation of the lecture's ideas, read the [lecture notes](lecture_notes.md).
+
 ## Notebook
 
 [`react_agent_langgraph.ipynb`](react_agent_langgraph.ipynb):
