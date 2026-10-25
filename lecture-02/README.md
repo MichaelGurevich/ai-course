@@ -29,8 +29,16 @@ The LLM is stateless. On every call the harness sends the system prompt, the too
 
 **Part 4: Why this matters**
 
-11. Linear context, quadratic bill: extrapolating the measured numbers to 50 steps, and the techniques that manage context (smaller tool results, trimming, summarizing, clearing tool results, prompt caching).
-12. The same agent in one line with LangChain's `create_agent`.
+11. Linear context, quadratic bill: extrapolating the measured numbers to 50 steps, and the techniques that manage context (smaller tool results, trimming, summarizing, clearing tool results, sub-agents, prompt caching).
+
+**Part 5: Sub-agents as tools**
+
+12. A "sales analyst" agent wrapped in an ordinary `@tool`. Each call starts a fresh conversation, does the heavy reading there and returns only a short answer.
+13. Part 3's question again: the main agent's context stays small, because the reports live and die in the sub-agent's context.
+
+**Part 6: The one-liner**
+
+14. The same agent in one line with LangChain's `create_agent`.
 
 ## Running it
 
